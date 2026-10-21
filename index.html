@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Filmes e Séries</title>
+    <!-- Fonte Inter e Ícones Lucide -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <i data-lucide="tv"></i>
+            <span>STREAMFLIX</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Início</a>
+            <a href="#">Séries</a>
+            <a href="#">Filmes</a>
+            <a href="#">Bombando</a>
+            <a href="#">Minha Lista</a>
+        </nav>
+        <div class="user-profile">
+            <i data-lucide="search"></i>
+            <i data-lucide="bell"></i>
+            <div class="avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Perfil">
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Destaque (Hero Section) -->
+    <section class="hero-banner" id="heroBanner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge-featured">SÉRIE EM DESTAQUE</span>
+            <h1 id="heroTitle">Stranger Things</h1>
+            <p id="heroDescription">Quando um jovem garoto desaparece, uma pequena cidade descobre um mistério envolvendo experimentos secretos, forças sobrenaturais aterrorizantes e uma garota muito estranha.</p>
+            <div class="hero-buttons">
+                <button class="btn-play-hero" id="heroPlayBtn">
+                    <i data-lucide="play"></i> Assistir Trailer
+                </button>
+                <button class="btn-info-hero">
+                    <i data-lucide="info"></i> Mais Informações
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Catálogos -->
+    <main class="content-container">
+        <section class="row-section">
+            <h2>Séries & Trailers em Alta</h2>
+            <div class="cards-grid" id="seriesGrid">
+                <!-- Inserido dinamicamente pelo JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal do Player de Vídeo YouTube -->
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-content">
+            <button class="btn-close-modal" id="closeModal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="video-container">
+                <iframe id="youtubeIframe" src="" title="YouTube trailer player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Título da Mídia</h3>
+                <p id="modalDesc">Descrição do filme ou série selecionada.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
